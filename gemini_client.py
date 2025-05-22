@@ -2,10 +2,12 @@
 
 import sys
 from google import genai
+import os
 
 GOOGLE_API_KEY=""
 
 if __name__ == "__main__":
+    os.chdir(os.path.dirname(__file__))
     with open('.api_key', 'r') as f:
         GOOGLE_API_KEY = f.read().strip()
 
